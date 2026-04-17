@@ -38,6 +38,8 @@ app.use("/api/v2", accessRouter);
 
 connectDb();
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Server is running on port ${PORT}`);
 });
