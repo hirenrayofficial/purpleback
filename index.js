@@ -6,11 +6,11 @@ const loginRouter = require("./router/loginRouter");
 const accessRouter = require("./router/accesRouter");
 const cors = require("cors")
 const connectDb = require("./services/mongoDb/db");
-const port = 4000;
+const port = "0.0.0.0"
 
 
 app.use(cors({
-  origin: "http://localhost:3000",
+  origin: "https://purple.hirenray.rest",
   methods: [ "GET","POST", "PUT", "DELETE"],
   credentials:true,
 }))
